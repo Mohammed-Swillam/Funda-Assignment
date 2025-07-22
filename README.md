@@ -71,7 +71,7 @@ which makelaars have the most properties listed for sale.
 
 ### Notes
 - While investigating the API, I noticed that changing the page size to a  value lower than 25 works fine as expected
-- When I tried to change it to a higher value than 25, I found that the api doesn't respect that newer value and still returns 25 results per page, but **it mistakenly  affects the ```AantalPaginas``` value**
+- But when I tried to set it to a higher value than 25, I found that the api doesn't respect that newer value and still returns 25 results per page, but **it mistakenly  affects the ```AantalPaginas``` value**
 
 ### AI Usages
 - Generated DTOs from API response (I used Insomnia, a tool similar to Postman, to fetch a sample of the api response, and provided it to CoPilot to quickly extract DTOs from the response)
