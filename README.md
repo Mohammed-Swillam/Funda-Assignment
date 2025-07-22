@@ -25,22 +25,21 @@ which makelaars have the most properties listed for sale.
    ```bash
    git clone https://github.com/Mohammed-Swillam/Funda-Assignment.git
    ```
-
+2. **Open a terminal inside the root folder and navigate to the project directory**:
+   ```bash
+   cd FundaMakelaarsAnalyzer   
+   ```
 3. **Restore packages**:
    ```bash
    dotnet restore
    ```
-4. **Run the application**:
-    1. Open a terminal and navigate to the project directory:
-   ```bash
-   cd FundaMakelaarsAnalyzer   
-   ```
-    2. excecute the following command to run the application:
+4. **Run the application**:   
+    1. Execute the following command to run the application:
         
     ```bash
     dotnet run .
     ```
-    3. if the previous command failed, try to explicitly provide the project name
+    2. If the previous command failed, try to explicitly provide the project name
     ```bash
     dotnet run --project FundaMakelaarsAnalyzer
     ```
@@ -56,7 +55,7 @@ which makelaars have the most properties listed for sale.
 
 ### Rate Limiting
 - Implemented using Polly's Retry policy
-- API Requests Uses a default of 630ms delay (via configuration) between requests to stay below 100 requests/minute limit
+- API Requests uses a default of 630ms delay (via configuration) between requests to stay below the 100 requests/minute limit
 
   *Api limit of 100 requests
   per minute. 1 minute => 60000ms / 95 requests (saftey buffer of 5 requests) = 631ms per request (rounded to 630ms for simplicity)*
@@ -75,12 +74,12 @@ which makelaars have the most properties listed for sale.
 - When I tried to change it to a higher value than 25, I found that the api doesn't respect that newer value and still returns 25 results per page, but **it mistakenly  affects the ```AantalPaginas``` value**
 
 ### AI Usages
-- Generated DTOs from API response (I used Insomnia, a tool similat to Postman to fetch a sample of the api response, and provided it to CoPilot to quickly extract DTOs from the response)
-- I took the following suggestions from the AI and applied them using Github Copilot:
+- Generated DTOs from API response (I used Insomnia, a tool similar to Postman, to fetch a sample of the api response, and provided it to CoPilot to quickly extract DTOs from the response)
+- I took the following suggestions from the AI and applied them using GitHub Copilot:
   - Added more Exception handling cases inside `FundaApiClient.cs`  
-  - Added ```TableFormatter``` class to display results when the app fetches and analyse requested data
+  - Added ```TableFormatter``` class to display results when the app fetches and analyzes requested data
   - Added friendly progress reporting during data fetching
-  - Although that I used Polly to implement a retry policy if the app hits the API rate limit, the AI further suggested the logic for setting up a delay between requests to avoid hitting the api rate limit, I added that and used the suggested calculation to set the delay value
+  - Although I used Polly to implement a retry policy if the app hits the API rate limit, the AI further suggested the logic for setting up a delay between requests to avoid hitting the api rate limit. I added that and used the suggested calculation to set the delay value
   - Applied a few suggested ```Console.WriteLine()``` statements to improve the user experience
 
 
