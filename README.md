@@ -74,13 +74,13 @@ which makelaars have the most properties listed for sale.
 - But when I tried to set it to a higher value than 25, I found that the api doesn't respect that newer value and still returns 25 results per page, but **it mistakenly  affects the ```AantalPaginas``` value**
 
 ### AI Usages
-- Generated DTOs from API response (I used Insomnia, a tool similar to Postman, to fetch a sample of the api response, and provided it to CoPilot to quickly extract DTOs from the response)
+- Generated DTOs from API response (I used Insomnia, a tool similar to Postman, to fetch a sample of the api response, and provided it to Copilot to quickly extract DTOs from the response)
 - I took the following suggestions from the AI and applied them using GitHub Copilot:
   - Added more Exception handling cases inside `FundaApiClient.cs`  
   - Added ```TableFormatter``` class to display results when the app fetches and analyzes requested data
   - Added friendly progress reporting during data fetching
   - Although I used Polly to implement a retry policy if the app hits the API rate limit, the AI further suggested the logic for setting up a delay between requests to avoid hitting the api rate limit. I added that and used the suggested calculation to set the delay value
-  - Applied a few suggested ```Console.WriteLine()``` statements to improve the user experience
+  - Applied a few suggested ```Console.WriteLine()``` statements to improve the user experience while waiting for the app to fetch and calculate the wanted results
 
 
 
