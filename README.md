@@ -22,12 +22,15 @@ which makelaars have the most properties listed for sale.
 ## Installation & Usage
 
 1. **Clone or download the repository**:
+   ```bash
+   git clone https://github.com/Mohammed-Swillam/Funda-Assignment.git
+   ```
 
-2. **Restore packages**:
+3. **Restore packages**:
    ```bash
    dotnet restore
    ```
-3. **Run the application**:
+4. **Run the application**:
     1. Open a terminal and navigate to the project directory:
    ```bash
    cd FundaMakelaarsAnalyzer   
