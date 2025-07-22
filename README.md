@@ -5,13 +5,13 @@ which makelaars have the most properties listed for sale.
 
 ## Business Features
 
-- Analyzes Two types of properties in Amsterdam: All properties and properties with gardens
-- Displayes the top 10 Maklaars in both types
+- Analyzes two types of properties in Amsterdam: All properties and properties with gardens
+- Displays the top 10 Maklaars in both types
 
 
 ## Technical Features
 - Uses Polly for retry policies and rate limiting
-- Displayes Real-time progress updates during data fetching
+- Displays real-time progress updates during data fetching
 - Separation of concerns with dependency injection
 
 
